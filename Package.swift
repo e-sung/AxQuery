@@ -7,7 +7,6 @@ let package = Package(
     name: "AxQuery",
     platforms: [
         .iOS(.v13),
-        .macOS(.v10_15),
         .macCatalyst(.v13)
     ],
     products: [
