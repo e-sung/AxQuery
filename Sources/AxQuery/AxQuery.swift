@@ -78,11 +78,11 @@ public struct AxQuery {
             case .role(let trait):
                 return view.accessibilityTraits.contains(trait)
             case .label(let textMatch):
-                return textMatch.matches(view.accessibilityLabel)
+                return textMatch.matches(view.effectiveAccessibilityLabel)
             case .identifier(let id):
                 return view.accessibilityIdentifier == id
             case .value(let textMatch):
-                return textMatch.matches(view.accessibilityValue)
+                return textMatch.matches(view.effectiveAccessibilityValue)
             case .hint(let textMatch):
                 return textMatch.matches(view.accessibilityHint)
             case .action(let actionName):
